@@ -45,7 +45,7 @@ export default function Game() {
       </View>
       {winner && (
         <Text style={styles.winnerText}>
-          The winner is {winner === 1 ? "Circle" : "Cross"}
+          The winner is {winner === 1 ? <SmallCircle /> : <SmallCross />}
         </Text>
       )}
       {winner && (
