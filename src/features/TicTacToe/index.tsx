@@ -7,7 +7,7 @@ import {
   View,
 } from "react-native";
 import ConfettiCannon from "react-native-confetti-cannon";
-import { useAppDispatch, useAppSelector } from "../hooks/reduxHooks";
+import { useAppDispatch, useAppSelector } from "../../hooks/reduxHooks";
 import Board from "./components/Board";
 import Circle from "./components/Circle";
 import Cross from "./components/Cross";
@@ -102,6 +102,7 @@ const styles = StyleSheet.create({
   turnIndicatorText: {
     fontSize: 40,
     fontWeight: "600",
+    textAlign: "center",
   },
   boardContainer: {
     alignItems: "center",

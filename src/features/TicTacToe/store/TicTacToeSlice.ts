@@ -1,6 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { RootState } from "../../store/store";
-import { GamePiece } from "../TicTacToe.types";
+import { RootState } from "../../../store/store";
+import { GamePiece } from "../index.types";
 
 const INITIAL_BOARD_STATE = [
   [GamePiece.EMPTY, GamePiece.EMPTY, GamePiece.EMPTY],

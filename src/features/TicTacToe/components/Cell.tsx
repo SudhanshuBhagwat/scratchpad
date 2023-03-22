@@ -1,5 +1,5 @@
 import { Pressable, View } from "react-native";
-import { GamePiece } from "../TicTacToe.types";
+import { GamePiece } from "../index.types";
 import Circle from "./Circle";
 import Cross from "./Cross";
 

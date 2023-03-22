@@ -26,8 +26,8 @@ export default function Cross({
       />
       <View
         style={{
-          height,
-          width,
+          height: width,
+          width: height,
           position: "absolute",
           backgroundColor: "black",
         }}

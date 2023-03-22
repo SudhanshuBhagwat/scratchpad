@@ -1,5 +1,5 @@
 import { View } from "react-native";
-import { useAppDispatch, useAppSelector } from "../../hooks/reduxHooks";
+import { useAppDispatch, useAppSelector } from "../../../hooks/reduxHooks";
 import { playTurn, selectBoard } from "../store/TicTacToeSlice";
 import Cell from "./Cell";
 
