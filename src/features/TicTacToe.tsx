@@ -1,7 +1,6 @@
 import { useRef } from "react";
 import {
   Dimensions,
-  Pressable,
   StyleSheet,
   Text,
   TouchableOpacity,
@@ -10,8 +9,8 @@ import {
 import ConfettiCannon from "react-native-confetti-cannon";
 import { useAppDispatch, useAppSelector } from "../hooks/reduxHooks";
 import Board from "./components/Board";
-import Circle, { SmallCircle } from "./components/Circle";
-import Cross, { SmallCross } from "./components/Cross";
+import Circle from "./components/Circle";
+import Cross from "./components/Cross";
 import { resetBoard, selectTurn, selectWinner } from "./store/TicTacToeSlice";
 
 const DIMENSIONS = Dimensions.get("screen");
@@ -38,14 +37,23 @@ export default function Game() {
       <Text style={styles.text}>Tic Tac Toe</Text>
       <View style={styles.turnIndicator}>
         <Text style={styles.turnIndicatorText}>Current turn : </Text>
-        {turn === 1 ? <SmallCircle /> : <SmallCross />}
+        {turn === 1 ? (
+          <Circle size={40} stroke={8} />
+        ) : (
+          <Cross height={40} width={15} />
+        )}
       </View>
       <View style={styles.boardContainer}>
         <Board />
       </View>
       {winner && (
         <Text style={styles.winnerText}>
-          The winner is {winner === 1 ? <SmallCircle /> : <SmallCross />}
+          The winner is{" "}
+          {winner === 1 ? (
+            <Circle size={40} stroke={8} />
+          ) : (
+            <Cross height={40} width={15} />
+          )}
         </Text>
       )}
       {winner && (

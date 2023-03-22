@@ -21,9 +21,9 @@ export default function Cell({
   function getComponent(piece: GamePiece) {
     switch (piece) {
       case GamePiece.CIRCLE:
-        return <Circle />;
+        return <Circle size={80} stroke={15} />;
       case GamePiece.CROSS:
-        return <Cross />;
+        return <Cross height={80} width={25} />;
       default:
         return null;
     }

@@ -1,26 +1,19 @@
 import { View } from "react-native";
 
-export default function Circle() {
+export default function Circle({
+  size,
+  stroke,
+}: {
+  size: number;
+  stroke: number;
+}) {
   return (
     <View
       style={{
-        height: 80,
-        width: 80,
-        borderRadius: 50,
-        borderWidth: 15,
-      }}
-    />
-  );
-}
-
-export function SmallCircle() {
-  return (
-    <View
-      style={{
-        height: 40,
-        width: 40,
-        borderRadius: 50,
-        borderWidth: 8,
+        height: size,
+        width: size,
+        borderRadius: size / 2,
+        borderWidth: stroke,
       }}
     />
   );
